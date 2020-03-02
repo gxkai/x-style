@@ -1,0 +1,16 @@
+.word-wrap {
+    &[contenteditable] {
+        &:empty:before {
+            content: attr(placeholder);
+            color: #cccccc;
+            font-size: 16px;
+        }
+        &:focus {
+            content: none;
+            outline: none;
+        }
+    }
+    &.g-active {
+        padding-left: 3px;
+    }
+}

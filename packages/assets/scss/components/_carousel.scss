@@ -1,0 +1,71 @@
+.carousel-wrap {
+    // 圆点默认样式
+    .swiper-pagination {
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+    }
+    .swiper-pagination-bullet {
+        margin: 0 4px;
+    }
+    // 圆点样式一
+    .bullets-classa {
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 3px;
+            border-radius: 0;
+        }
+    }
+    // 圆点样式二
+    .bullets-classb {
+        .swiper-pagination-bullet {
+            border: 3px solid transparent;
+            width: 10px;
+            height: 10px;
+            box-sizing: border-box;
+            &-active {
+                border-color: #007aff;
+                background: #fff;
+            }
+        }
+    }
+    // 分数样式一
+    .fraction-classc {
+        text-align: right;
+        padding-right: 5%;
+        box-sizing: border-box;
+    }
+    .fraction-classd {
+        font-size: 12px;
+        color: #666;
+        text-align: right;
+        padding-right: 5%;
+        box-sizing: border-box;
+        .swiper-pagination-current {
+            font-size: 16px;
+            color: #000;
+        }
+    }
+    // 箭头样式一
+    .nav-classa {
+        background-size: 60%;
+    }
+    // 箭头样式二
+    .nav-classb {
+        background-size: 40%;
+    }
+    .carousel-info {
+        img {
+            width: 100%;
+        }
+    }
+    .swiper-slide {
+        a {
+            display: block;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.com-fold {
+    position: relative;
+    #place-tip {
+        top: 35px;
+    }
+}
+
+.fold-wrap {
+    .fold-item {
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        &-title {
+            line-height: 35px;
+            position: relative;
+            font-size: 14px;
+            padding: 0 10px;
+            &:before {
+                content: '';
+                border-style: solid;
+                border-width: 5px;
+            }
+        }
+        &-content {
+        }
+    }
+    .com-item {
+        z-index: 999;
+    }
+
+    &.one-style {
+        .fold-item {
+            &-title {
+                border-bottom: 1px solid #e5e5e5;
+                color: #333;
+                &:before {
+                    border-color: transparent transparent transparent #333;
+                    position: absolute;
+                    right: 10px;
+                    top: calc(50% - 5px);
+                }
+            }
+            &.active {
+                .fold-item-title {
+                    color: $themeColor;
+                    &:before {
+                        border-color: transparent transparent transparent $themeColor;
+                        transform: translateY(3px) rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+    &.two-style {
+        .fold-item {
+            &-title {
+                background: #f5f5f5;
+                color: #333;
+                &:before {
+                    border-color: transparent transparent transparent #333;
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+            &.active {
+                .fold-item-title {
+                    background: $themeColor;
+                    color: #fff;
+                    &:before {
+                        border-color: transparent transparent transparent #fff;
+                        transform: translateY(3px) rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+    &.three-style {
+        .fold-item {
+            &-title {
+                border-bottom: 1px solid #e5e5e5;
+                color: #333;
+                &:before {
+                    position: absolute;
+                    right: 10px;
+                    top: 16px;
+                    width: 6px;
+                    height: 6px;
+                    border-style: solid;
+                    border-width: 2px 0 0 2px;
+                    transform: translate(-75%, -50%) rotate(135deg);
+                }
+            }
+            &.active {
+                .fold-item-title {
+                    color: $themeColor;
+                    &:before {
+                        transform: translate(-50%, -75%) rotate(225deg);
+                    }
+                }
+            }
+        }
+    }
+}

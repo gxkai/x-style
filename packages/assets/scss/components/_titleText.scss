@@ -1,0 +1,43 @@
+.title-text-wrap {
+    padding: 16px 10px;
+    word-break: break-all;
+    position: relative;
+    &.title-text-bbt {
+        border-bottom: 1px solid #f9f9f9;
+    }
+}
+.title-text-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 20px;
+    h3 {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: #323233;
+        overflow: hidden;
+    }
+}
+.title-text-sub {
+    font-size: 12px;
+    line-height: 1.375;
+    color: #8c8c8c;
+    margin-top: 8px;
+}
+.title-text-links {
+    font-size: 12px;
+    line-height: 1.833;
+    height: 20px;
+    color: #969799;
+    position: absolute;
+    top: 16px;
+    right: 0;
+    padding-right: 10px;
+    &.only-text {
+        color: #007aff;
+    }
+    .iconfont {
+        font-size: 14px;
+    }
+}

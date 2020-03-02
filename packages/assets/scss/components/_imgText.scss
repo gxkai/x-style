@@ -1,0 +1,53 @@
+.img-text-wrap {
+    padding: 15px;
+    .img-text-imgbox {
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    .img-text-textbox {
+        line-height: 1.6;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: normal;
+        overflow: hidden;
+        text-align: left;
+        font-size: 0.8rem;
+    }
+    &.up-img {
+        .img-text-textbox {
+            margin: 0.5rem 0;
+        }
+    }
+    &.left-img {
+        .img-text-imgbox {
+            float: left;
+            width: 50%;
+            margin: 0 10px 0 0;
+        }
+        .img-text-textbox {
+            overflow: visible;
+        }
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+    &.right-img {
+        .img-text-imgbox {
+            float: right;
+            width: 50%;
+            margin: 0 0 0 10px;
+        }
+        .img-text-textbox {
+            overflow: visible;
+        }
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+}

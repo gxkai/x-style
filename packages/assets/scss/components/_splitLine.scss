@@ -1,0 +1,13 @@
+.com-item {
+    &__split-line {
+    }
+}
+.split-line {
+    display: flex;
+    align-items: center;
+    > div {
+        width: 100%;
+        border-top-width: 2px;
+        border-top-color: #e5e5e5;
+    }
+}

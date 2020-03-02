@@ -1,0 +1,6 @@
+@for $i from 1 through 300 {
+    @include margin-variant($i, $i/4 + rem);
+    @include padding-variant($i, $i/4 + rem);
+    @include width-variant($i, $i/4 + rem);
+    @include height-variant($i, $i/4 + rem);
+}

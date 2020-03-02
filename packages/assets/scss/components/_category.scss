@@ -1,0 +1,54 @@
+.category-wrap {
+    min-height: 100px;
+    position: relative;
+}
+
+.category-ul {
+    @extend %clearfix;
+    li {
+        box-sizing: border-box;
+        a {
+            display: block;
+            @extend %tow;
+            font-size: 14px;
+            color: #333;
+            line-height: 2;
+            min-height: 28px;
+            &:hover {
+                color: $themeColor;
+            }
+        }
+    }
+    &.horizontal {
+        li {
+            width: 33.33333%;
+            float: left;
+            text-align: center;
+            padding: 0 0.5%;
+        }
+    }
+    &.vertical {
+        li {
+            padding: 5px 10px;
+            border-bottom: 1px solid #efefef;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                border-top: 1px solid #666;
+                border-right: 1px solid #666;
+                transform: rotate(45deg);
+                right: 15px;
+                top: 15px;
+            }
+            &:hover {
+                &:after {
+                    border-top: 1px solid $themeColor;
+                    border-right: 1px solid $themeColor;
+                }
+            }
+        }
+    }
+}

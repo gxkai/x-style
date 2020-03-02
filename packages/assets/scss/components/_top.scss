@@ -1,0 +1,25 @@
+.top-wrap {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    .top-left,
+    .top-right {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .top-center {
+        flex: 1;
+        text-align: center;
+        @include text-ellipsis();
+        &__text {
+            font-size: 1rem;
+            @include text-ellipsis();
+        }
+        &__logo {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

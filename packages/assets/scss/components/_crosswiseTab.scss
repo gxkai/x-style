@@ -1,0 +1,52 @@
+.crosswise-tab {
+    position: relative;
+    #place-tip {
+        top: 32px;
+    }
+    &-wrap {
+        .com-item {
+            z-index: 999;
+        }
+        &__tag {
+            li {
+                display: inline-block;
+                padding: 7px 15px;
+                font-size: 14px;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+            &.one-style {
+                li {
+                    &.active {
+                        color: $themeColor;
+                    }
+                }
+            }
+
+            &.two-style {
+                border-bottom: 1px solid #efefef;
+                li {
+                    &.active {
+                        background: #8c8c8c;
+                        border-radius: 4px 4px 0 0;
+                        color: #fff;
+                    }
+                }
+            }
+            &.three-style {
+                li {
+                    border-bottom: 2px solid transparent;
+                    &.active {
+                        color: $themeColor;
+                        border-bottom-color: $themeColor;
+                    }
+                }
+            }
+        }
+        &__content {
+            min-height: 100px;
+            &-item {
+            }
+        }
+    }
+}

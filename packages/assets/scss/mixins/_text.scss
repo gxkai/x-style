@@ -1,0 +1,11 @@
+// Text Ellipsis
+@mixin text-ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin text-variant($id: 1, $size: 1px) {
+    .text-#{$id} {
+        font-size: $size !important;
+    }
+}
