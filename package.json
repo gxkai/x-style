@@ -1,14 +1,14 @@
 {
-  "name": "x-style-vue",
+  "name": "x-style",
   "version": "0.1.0",
   "private": false,
-  "main": "lib/x-style-vue.umd.js",
+  "main": "lib/x-style.umd.js",
   "scripts": {
     "dev": "start-storybook",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name x-style-vue --dest lib packages/index.js",
+    "lib": "vue-cli-service build --target lib --name x-style --dest lib packages/index.js",
     "publish": "npm run lib && npm publish",
     "plop": "plop",
     "icon": "node scripts/icon.js --name=font_1563137_7geb7cu2ubd"
