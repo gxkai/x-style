@@ -4,30 +4,30 @@
         :style="[
             {
                 position: 'absolute',
-                width: options.width + 'px',
-                height: options.height + 'px',
-                left: options.left + 'px',
-                top: options.top + 'px',
+                width: component.options.width + 'px',
+                height: component.options.height + 'px',
+                left: component.options.left + 'px',
+                top: component.options.top + 'px',
                 'z-index': 11
             }
         ]"
-        v-if="options"
+        v-if="component"
     >
         <a
-            :href="options.link.path"
-            :target="options.target"
+            :href="component.options.link.path"
+            :target="component.options.target"
             :style="{
-                'font-size': options.style.fontSize + 'px',
-                color: options.style.color,
-                background: options.style.background,
-                borderWidth: options.style.borderWidth + 'px',
-                borderStyle: options.style.borderStyle,
-                borderColor: options.style.borderColor,
-                'text-align': options.style.textAlign,
-                'border-radius': options.style.borderRadius + 'px'
+                'font-size': component.options.style.fontSize + 'px',
+                color: component.options.style.color,
+                background: component.options.style.background,
+                borderWidth: component.options.style.borderWidth + 'px',
+                borderStyle: component.options.style.borderStyle,
+                borderColor: component.options.style.borderColor,
+                'text-align': component.options.style.textAlign,
+                'border-radius': component.options.style.borderRadius + 'px'
             }"
         >
-            {{ options[`${this.lang}_text`] }}
+            {{ component.options[`${this.lang}_text`] }}
         </a>
     </div>
 </template>
@@ -41,7 +41,7 @@ export default {
     filters: {},
     provide: {},
     inject: [],
-    props: ['options', 'lang'],
+    props: ['component', 'lang'],
     computed: {},
     watch: {},
     data() {
