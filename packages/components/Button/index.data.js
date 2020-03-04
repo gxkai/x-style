@@ -3,6 +3,7 @@ export default {
     uuid: nanoid(),
     type: 'button',
     name: '按钮',
+    icon: 'icon-x_btn',
     options: {
         originX: 0,
         originY: 0,
