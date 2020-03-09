@@ -1,18 +1,5 @@
 <template>
-    <div
-        class="button-wrap"
-        :style="[
-            {
-                position: 'absolute',
-                width: component.options.width + 'px',
-                height: component.options.height + 'px',
-                left: component.options.left + 'px',
-                top: component.options.top + 'px',
-                'z-index': 11
-            }
-        ]"
-        v-if="component"
-    >
+    <div class="button-wrap" v-if="component">
         <a
             :href="component.options.link.path"
             :target="component.options.target"
