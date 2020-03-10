@@ -4,6 +4,7 @@ export default {
     type: 'button',
     name: '按钮',
     icon: 'icon-x_btn',
+    level: 2,
     pc: {
         width: 100,
         height: 35

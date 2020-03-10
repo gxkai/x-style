@@ -3,6 +3,7 @@ export default {
     uuid: nanoid(),
     type: 'free',
     name: '自由容器',
+    level: 1,
     pc: {
         height: 200,
         width: 375
