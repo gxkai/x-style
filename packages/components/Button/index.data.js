@@ -7,11 +7,13 @@ export default {
     level: 2,
     pc: {
         width: 100,
-        height: 35
+        height: 35,
+        zIndex: 999
     },
     phone: {
         width: 120,
-        height: 42
+        height: 42,
+        zIndex: 999
     },
     options: {
         cn_text: '按钮名称',
