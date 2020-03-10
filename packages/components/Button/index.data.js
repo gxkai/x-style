@@ -6,9 +6,7 @@ export default {
     icon: 'icon-x_btn',
     pc: {
         width: 100,
-        height: 35,
-        left: 50,
-        top: 50
+        height: 35
     },
     phone: {
         width: 120,

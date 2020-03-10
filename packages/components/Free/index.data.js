@@ -3,13 +3,15 @@ export default {
     uuid: nanoid(),
     type: 'free',
     name: '自由容器',
-    options: {
-        originX: 0,
-        originY: 0,
+    pc: {
         height: 200,
-        width: 375,
-        left: 0,
-        top: 0,
+        width: 375
+    },
+    phone: {
+        width: 280,
+        height: 50
+    },
+    options: {
         style: {
             backgroundColor: '#ffffff'
         },
