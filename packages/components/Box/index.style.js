@@ -3,7 +3,7 @@ export default [
         type: 'Themed Boxes',
         list: [
             {
-                type: 'Box',
+                type: 'box',
                 name: '自由容器',
                 level: 1,
                 pc: {

@@ -3,7 +3,7 @@ export default [
         type: 'Themed Buttons',
         list: [
             {
-                type: 'Button',
+                type: 'button',
                 name: '按钮',
                 icon: 'icon-x_btn',
                 level: 2,
