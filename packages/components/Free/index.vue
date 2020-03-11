@@ -1,18 +1,5 @@
 <template>
-    <div v-if="component">
-        <div
-            :style="[
-                {
-                    position: 'relative',
-                    height: component.options.height + 'px',
-                    overflow: 'hidden',
-                    backgroundColor: component.options.style.backgroundColor
-                }
-            ]"
-        >
-            <component v-for="child in children" :key="child.uuid" :is="`x-${child.type}`" :component="child" :lang="lang" />
-        </div>
-    </div>
+    <div v-if="component" :style="component.options.style"></div>
 </template>
 
 <script>

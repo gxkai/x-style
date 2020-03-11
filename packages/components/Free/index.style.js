@@ -16,7 +16,8 @@ export default [
                 },
                 options: {
                     style: {
-                        backgroundColor: '#ffffff'
+                        backgroundColor: '#ffffff',
+                        border: '1px solid #000000'
                     },
                     class: {
                         // 类名
