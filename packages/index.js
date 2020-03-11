@@ -10,8 +10,6 @@ const install = function(Vue) {
         if (fileName.split('/')[2] === 'children') return;
         // 组件实例
         const reqCom = requireComponents(fileName);
-        // 截取路径作为组件名
-        // const reqComName = fileName.split('/')[1];
         const reqComName = reqCom.default.name;
         // 组件挂载
         Vue.component(`${prefix.toUpperCase()}${reqComName}`, reqCom.default || reqCom);

@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    name: 'Free',
+    name: 'Box',
     components: {},
     mixins: [],
     extends: {},
