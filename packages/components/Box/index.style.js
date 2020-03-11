@@ -3,6 +3,9 @@ export default [
         type: 'Themed Boxes',
         list: [
             {
+                type: 'Box',
+                name: '自由容器',
+                level: 1,
                 pc: {
                     height: 200,
                     width: 375
