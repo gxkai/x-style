@@ -1,7 +1,7 @@
 const nanoid = require('nanoid');
 export default {
     uuid: nanoid(),
-    type: 'box',
+    type: 'Box',
     name: '自由容器',
     level: 1,
     pc: {
