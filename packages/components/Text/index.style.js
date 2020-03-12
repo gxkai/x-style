@@ -1,6 +1,6 @@
 export default [
     {
-        type: '',
+        type: 'Themed Text',
         list: []
     }
 ];
