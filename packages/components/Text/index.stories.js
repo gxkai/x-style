@@ -46,7 +46,7 @@ storiesOf('Text', module)
                 return {
                     list: require('./index.style').default,
                     lang: 'cn',
-                    platform: 'pc'
+                    platform: 'phone'
                 };
             }
         }),
