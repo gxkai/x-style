@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: '{{properCase name }}',
+    name: 'Text',
     components: {},
     mixins: [],
     extends: {},
