@@ -6,23 +6,15 @@ export default {
     pc: {
         width: 100,
         height: 35,
-        zIndex: 999
-    },
-    phone: {
-        width: 120,
-        height: 42,
-        zIndex: 999
-    },
-    options: {
+        zIndex: 999,
         data: {},
         style: {},
         class: {},
         visible: {}
     },
-    // 移动端样式覆盖
-    phoneOptions: {
-        style: {},
-        class: {},
-        visible: {}
+    phone: {
+        width: 120,
+        height: 42,
+        zIndex: 999
     }
 };
