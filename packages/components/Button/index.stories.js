@@ -4,11 +4,12 @@ import Com from './index.vue';
 
 storiesOf('Button', module).add('plain', () => ({
     components: { Com },
-    template: '<Com :component="component" :lang="lang"></Com>',
+    template: '<Com :component="component" :lang="lang" :platform="platform"></Com>',
     data() {
         return {
             component: require('./index.data').default,
-            lang: 'cn'
+            lang: 'cn',
+            platform: 'pc'
         };
     }
 }));

@@ -1,9 +1,6 @@
-const nanoid = require('nanoid');
 export default {
-    uuid: nanoid(),
     type: 'Button',
     name: '按钮',
-    icon: 'icon-x_btn',
     level: 2,
     pc: {
         width: 100,

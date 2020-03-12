@@ -4,14 +4,12 @@ import Com from './index.vue';
 
 storiesOf('Free', module).add('plain', () => ({
     components: { Com },
-    template: '<Com :component="component" :lang="lang" :children="children"></Com>',
+    template: '<Com :component="component" :lang="lang" :platform="platform"></Com>',
     data() {
-        const buttonData = require('../Button/index.data').default;
-        const freeData = require('./index.data').default;
         return {
-            component: freeData,
+            component: require('./index.data').default,
             lang: 'cn',
-            children: [buttonData, freeData]
+            platform: 'pc'
         };
     }
 }));

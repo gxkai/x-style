@@ -20,7 +20,7 @@
                 zIndex: component[platform].zIndex
             }"
         >
-            {{ component[platform][`${this.lang}_text`] }}
+            {{ component[platform].text[this.lang] }}
         </a>
     </div>
 </template>
