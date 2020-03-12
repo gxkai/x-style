@@ -4,17 +4,24 @@ export default {
     // 1:可以作为父组件 2: 只可以作为子组件
     level: 1,
     pc: {
-        width: 100,
-        height: 35,
-        zIndex: 999,
+        units: {
+            width: 100,
+            height: 35
+        },
         data: {},
-        style: {},
+        style: {
+            zIndex: 999
+        },
         class: {},
         visible: {}
     },
     phone: {
-        width: 120,
-        height: 42,
-        zIndex: 999
+        units: {
+            width: 120,
+            height: 42
+        },
+        style: {
+            zIndex: 999
+        }
     }
 };

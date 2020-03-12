@@ -3,8 +3,10 @@ export default {
     name: '自由容器',
     level: 1,
     pc: {
-        height: 200,
-        width: 375,
+        units: {
+            height: 200,
+            width: 375
+        },
         style: {
             backgroundColor: '#ffffff'
         },
@@ -16,7 +18,9 @@ export default {
         }
     },
     phone: {
-        width: 280,
-        height: 50
+        units: {
+            width: 280,
+            height: 50
+        }
     }
 };

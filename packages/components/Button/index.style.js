@@ -7,9 +7,13 @@ export default [
                 name: '按钮',
                 level: 2,
                 pc: {
-                    width: 100,
-                    height: 35,
-                    zIndex: 999,
+                    units: {
+                        width: 140,
+                        height: 50,
+                        fontSize: 12, // 字体大小 12 - 3
+                        borderWidth: 0, // 边框粗细0 - 20
+                        borderRadius: 35 // 边框弧度 任意数字
+                    },
                     text: {
                         cn: '按钮名称',
                         en: 'button name'
@@ -22,14 +26,14 @@ export default [
                     },
                     target: false,
                     style: {
-                        fontSize: 12, // 字体大小 12 - 30
+                        zIndex: 999,
+                        display: 'flex',
+                        alignItems: 'center',
                         color: '#ffffff', // 字体颜色
                         background: '#000000', // 背景颜色
-                        borderWidth: 0, // 边框粗细0 - 20
                         borderStyle: 'solid', // 边框样式
                         borderColor: '#efefef', // 边框颜色
-                        borderRadius: 35, // 边框弧度 任意数字
-                        textAlign: 'center' // 文字位置  center/left/right
+                        justifyContent: 'center' // 文字位置  center/left/right
                     },
                     class: {
                         // 类名
@@ -39,24 +43,13 @@ export default [
                     }
                 },
                 phone: {
-                    width: 120,
-                    height: 42,
-                    zIndex: 999
-                }
-            }
-        ]
-    },
-    {
-        type: 'Text Buttons',
-        list: [
-            {
-                type: 'Button',
-                name: '按钮',
-                level: 2,
-                pc: {
-                    width: 100,
-                    height: 35,
-                    zIndex: 999,
+                    units: {
+                        width: 200,
+                        height: 50,
+                        fontSize: 12, // 字体大小 12 - 3
+                        borderWidth: 0, // 边框粗细0 - 20
+                        borderRadius: 35 // 边框弧度 任意数字
+                    },
                     text: {
                         cn: '按钮名称',
                         en: 'button name'
@@ -69,14 +62,14 @@ export default [
                     },
                     target: false,
                     style: {
-                        fontSize: 12, // 字体大小 12 - 30
+                        zIndex: 999,
+                        display: 'flex',
+                        alignItems: 'center',
                         color: '#ffffff', // 字体颜色
-                        background: '#48A1EC', // 背景颜色
-                        borderWidth: 0, // 边框粗细0 - 20
+                        background: '#000000', // 背景颜色
                         borderStyle: 'solid', // 边框样式
                         borderColor: '#efefef', // 边框颜色
-                        borderRadius: 35, // 边框弧度 任意数字
-                        textAlign: 'center' // 文字位置  center/left/right
+                        justifyContent: 'center' // 文字位置  center/left/right
                     },
                     class: {
                         // 类名
@@ -84,11 +77,6 @@ export default [
                     visible: {
                         // 最小单元显示或隐藏
                     }
-                },
-                phone: {
-                    width: 120,
-                    height: 42,
-                    zIndex: 999
                 }
             }
         ]

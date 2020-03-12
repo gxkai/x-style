@@ -1,25 +1,30 @@
-import config from "@/config";
-const parseImg = src => {
-    let type = Object.prototype.toString.call(src);
-    if (!src) return placeImg;
-    if (type === '[object String]') {
-        return config.imgHost + src;
+const parseUnits = (obj, platform, size=375) => {
+    Object.keys(obj).forEach(key => {
+        const newObj = obj[key]
+        if (Object.prototype.toString.call(newObj) === "[object Array]") {
+            newObj.forEach(e => {
+                parseUnits(e , platform, size)
+            })
+        }else if(Object.prototype.toString.call(newObj)==='[object Object]'){
+            parseUnits(newObj, platform, size)
+        }else{
+            _addUnit(obj,key, platform, size)
+        }
+    })
+}
+const _addUnit = (obj,key, platform, size=375) => {
+    console.log(window.devicePixelRatio)
+    switch (platform) {
+        case  'pc':
+            obj[key]= obj[key] + 'px'
+            break;
+        case 'phone':
+            obj[key] =  obj[key] * 2/37.5 + 'rem'
+            break;
+        default:
+            break
     }
-    if (type === '[object Array]') {
-        if (src.length === 0) return placeImg;
-        return config.imgHost + src[0];
-    }
-    return placeImg;
-};
-const parseI18ns = (item, key) => {
-    return item.i18ns ? item.i18ns[key] : '';
-};
-const parseLang = (obj, lang, key) => {
-    if (!obj) return '';
-    return obj[`${lang}_${key}`];
-};
+}
 export {
-    parseImg,
-    parseI18ns,
-    parseLang
+    parseUnits
 };

@@ -1,31 +1,18 @@
 <template>
-    <div class="button-wrap" v-if="component">
-        <a
-            :href="component[platform].link.path"
-            :target="component[platform].target"
-            :style="{
-                'font-size': component[platform].style.fontSize + 'px',
-                color: component[platform].style.color,
-                background: component[platform].style.background,
-                borderWidth: component[platform].style.borderWidth + 'px',
-                borderStyle: component[platform].style.borderStyle,
-                borderColor: component[platform].style.borderColor,
-                'text-align': component[platform].style.textAlign,
-                'border-radius': component[platform].style.borderRadius + 'px',
-                width: component[platform].width + 'px',
-                height: component[platform].height + 'px',
-                left: component[platform].left + 'px',
-                top: component[platform].top + 'px',
-                zIndex: component[platform].zIndex,
-                position: position ? position : 'absolute'
-            }"
-        >
+    <a
+        v-if="component"
+        :href="component[platform].link.path"
+        :target="component[platform].target"
+        :style="[{ position }, styleObj, unitsObj]"
+    >
+        <span>
             {{ component[platform].text[this.lang] }}
-        </a>
-    </div>
+        </span>
+    </a>
 </template>
 
 <script>
+import { parseUnits } from '@/lib/tools';
 export default {
     name: 'Button',
     components: {},
@@ -34,8 +21,33 @@ export default {
     filters: {},
     provide: {},
     inject: [],
-    props: ['component', 'lang', 'platform', 'position'],
-    computed: {},
+    props: {
+        component: {
+            type: Object,
+            default: null
+        },
+        lang: {
+            type: String,
+            default: 'cn'
+        },
+        platform: {
+            type: String,
+            default: 'pc'
+        },
+        position: {
+            type: String,
+            default: 'absolute'
+        }
+    },
+    computed: {
+        unitsObj() {
+            parseUnits(this.component[this.platform].units, this.platform);
+            return this.component[this.platform].units;
+        },
+        styleObj() {
+            return this.component[this.platform].style;
+        }
+    },
     watch: {},
     data() {
         return {};

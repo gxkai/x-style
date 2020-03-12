@@ -2,20 +2,16 @@
     <div
         v-if="component"
         :style="[
-            component[platform].style,
+            styleObj,
+            unitsObj,
             {
-                width: component[platform].width + 'px',
-                height: component[platform].height + 'px',
-                left: component[platform].left + 'px',
-                top: component[platform].top + 'px',
-                zIndex: component[platform].zIndex,
-                position: position ? position : 'absolute'
+                position
             }
         ]"
     ></div>
 </template>
-
 <script>
+import { parseUnits } from '@/lib/tools';
 export default {
     name: 'Box',
     components: {},
@@ -23,8 +19,34 @@ export default {
     extends: {},
     filters: {},
     provide: {},
-    props: ['component', 'lang', 'platform', 'position'],
-    computed: {},
+    inject: [],
+    props: {
+        component: {
+            type: Object,
+            default: null
+        },
+        lang: {
+            type: String,
+            default: 'cn'
+        },
+        platform: {
+            type: String,
+            default: 'pc'
+        },
+        position: {
+            type: String,
+            default: 'absolute'
+        }
+    },
+    computed: {
+        unitsObj() {
+            parseUnits(this.component[this.platform].units, this.platform);
+            return this.component[this.platform].units;
+        },
+        styleObj() {
+            return this.component[this.platform].style;
+        }
+    },
     watch: {},
     data() {
         return {};

@@ -7,11 +7,15 @@ export default [
                 name: '自由容器',
                 level: 1,
                 pc: {
-                    height: 200,
-                    width: 375,
+                    units: {
+                        height: 200,
+                        width: 375
+                    },
                     style: {
                         backgroundColor: '#ffffff',
-                        border: '1px solid #000000'
+                        borderStyle: 'solid',
+                        borderColor: '#000000',
+                        borderWidth: '1px'
                     },
                     class: {
                         // 类名
@@ -21,8 +25,22 @@ export default [
                     }
                 },
                 phone: {
-                    width: 280,
-                    height: 50
+                    units: {
+                        height: 50,
+                        width: 280,
+                        borderWidth: 1
+                    },
+                    style: {
+                        backgroundColor: '#ffffff',
+                        borderStyle: 'solid',
+                        borderColor: '#000000'
+                    },
+                    class: {
+                        // 类名
+                    },
+                    visible: {
+                        // 最小单元显示或隐藏
+                    }
                 }
             }
         ]

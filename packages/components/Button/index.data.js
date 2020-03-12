@@ -3,8 +3,11 @@ export default {
     name: '按钮',
     level: 2,
     pc: {
-        width: 100,
-        height: 35,
+        units: {
+            width: 100,
+            height: 35,
+            fontSize: 12
+        },
         zIndex: 999,
         text: {
             cn: '按钮名称',
@@ -18,7 +21,6 @@ export default {
         },
         target: false,
         style: {
-            fontSize: 12, // 字体大小 12 - 30
             color: '#ffffff', // 字体颜色
             background: '#48A1EC', // 背景颜色
             borderWidth: 0, // 边框粗细0 - 20
@@ -35,8 +37,11 @@ export default {
         }
     },
     phone: {
-        width: 120,
-        height: 42,
+        units: {
+            width: 120,
+            height: 42,
+            fontSize: 12
+        },
         zIndex: 999
     }
 };
