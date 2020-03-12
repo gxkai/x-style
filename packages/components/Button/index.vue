@@ -11,7 +11,13 @@
                 borderStyle: component[platform].style.borderStyle,
                 borderColor: component[platform].style.borderColor,
                 'text-align': component[platform].style.textAlign,
-                'border-radius': component[platform].style.borderRadius + 'px'
+                'border-radius': component[platform].style.borderRadius + 'px',
+                position: 'absolute',
+                width: component[platform].width + 'px',
+                height: component[platform].height + 'px',
+                left: component[platform].left + 'px',
+                top: component[platform].top + 'px',
+                zIndex: component[platform].zIndex
             }"
         >
             {{ component[platform][`${this.lang}_text`] }}

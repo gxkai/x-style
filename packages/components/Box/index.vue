@@ -1,5 +1,18 @@
 <template>
-    <div v-if="component" :style="component[platform].style"></div>
+    <div
+        v-if="component"
+        :style="[
+            component[platform].style,
+            {
+                position: 'absolute',
+                width: component[platform].width + 'px',
+                height: component[platform].height + 'px',
+                left: component[platform].left + 'px',
+                top: component[platform].top + 'px',
+                zIndex: component[platform].zIndex
+            }
+        ]"
+    ></div>
 </template>
 
 <script>
