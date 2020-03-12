@@ -24,7 +24,7 @@ export default [
                     style: {
                         fontSize: 12, // 字体大小 12 - 30
                         color: '#ffffff', // 字体颜色
-                        background: '#48A1EC', // 背景颜色
+                        background: '#000000', // 背景颜色
                         borderWidth: 0, // 边框粗细0 - 20
                         borderStyle: 'solid', // 边框样式
                         borderColor: '#efefef', // 边框颜色
