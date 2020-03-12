@@ -36,6 +36,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.1.2",
     "lint-staged": "^9.5.0",
+    "lodash": "^4.17.15",
     "plop": "^2.5.4",
     "prettier": "^1.19.1",
     "sass": "^1.26.2",

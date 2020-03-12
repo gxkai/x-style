@@ -13,7 +13,6 @@ const parseUnits = (obj, platform, size=375) => {
     })
 }
 const _addUnit = (obj,key, platform, size=375) => {
-    console.log(window.devicePixelRatio)
     switch (platform) {
         case  'pc':
             obj[key]= obj[key] + 'px'

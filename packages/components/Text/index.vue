@@ -44,8 +44,9 @@ export default {
     },
     computed: {
         unitsObj() {
-            parseUnits(this.component[this.platform].units, this.platform);
-            return this.component[this.platform].units;
+            const result = Object.assign({}, this.component[this.platform].units);
+            parseUnits(result, this.platform);
+            return result;
         },
         styleObj() {
             return this.component[this.platform].style;
