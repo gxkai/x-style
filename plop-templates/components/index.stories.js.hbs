@@ -6,11 +6,12 @@ import {{properCase name}}md from './index.md';
 storiesOf('{{properCase name}}', module)
   .add('{{properCase name}}', () => ({
     components: { {{properCase name}} },
-    template: '<{{properCase name}} :options="component.options" :uuid="component.uuid" :lang="lang"></{{properCase name}}>',
+    template: '<{{properCase name}} :component="component" :platform="platform" :lang="lang"></{{properCase name}}>',
     data() {
     return {
     component: require('./index.data').default,
-    lang: 'cn'
+    lang: 'cn',
+    platform: 'pc'
     };
     }
   }),{notes: { markdown: {{properCase name}}md }})

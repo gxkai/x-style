@@ -8,16 +8,11 @@ export default {
     pc: {
         width: 100,
         height: 35,
-        zIndex: 999
-    },
-    phone: {
-        width: 120,
-        height: 42,
-        zIndex: 999
-    },
-    options: {
-        cn_text: '按钮名称',
-        en_text: 'button name',
+        zIndex: 999,
+        text: {
+            cn: '按钮名称',
+            en: 'button name'
+        },
         link: {
             linkType: 1,
             linkId: null,
@@ -41,5 +36,10 @@ export default {
         visible: {
             // 最小单元显示或隐藏
         }
+    },
+    phone: {
+        width: 120,
+        height: 42,
+        zIndex: 999
     }
 };

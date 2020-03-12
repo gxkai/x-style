@@ -1,20 +1,20 @@
 <template>
     <div class="button-wrap" v-if="component">
         <a
-            :href="component.options.link.path"
-            :target="component.options.target"
+            :href="component[platform].link.path"
+            :target="component[platform].target"
             :style="{
-                'font-size': component.options.style.fontSize + 'px',
-                color: component.options.style.color,
-                background: component.options.style.background,
-                borderWidth: component.options.style.borderWidth + 'px',
-                borderStyle: component.options.style.borderStyle,
-                borderColor: component.options.style.borderColor,
-                'text-align': component.options.style.textAlign,
-                'border-radius': component.options.style.borderRadius + 'px'
+                'font-size': component[platform].style.fontSize + 'px',
+                color: component[platform].style.color,
+                background: component[platform].style.background,
+                borderWidth: component[platform].style.borderWidth + 'px',
+                borderStyle: component[platform].style.borderStyle,
+                borderColor: component[platform].style.borderColor,
+                'text-align': component[platform].style.textAlign,
+                'border-radius': component[platform].style.borderRadius + 'px'
             }"
         >
-            {{ component.options[`${this.lang}_text`] }}
+            {{ component[platform][`${this.lang}_text`] }}
         </a>
     </div>
 </template>
@@ -28,7 +28,7 @@ export default {
     filters: {},
     provide: {},
     inject: [],
-    props: ['component', 'lang'],
+    props: ['component', 'lang', 'platform'],
     computed: {},
     watch: {},
     data() {

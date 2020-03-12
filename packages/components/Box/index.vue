@@ -1,5 +1,5 @@
 <template>
-    <div v-if="component" :style="component.options.style"></div>
+    <div v-if="component" :style="component[platform].style"></div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
     extends: {},
     filters: {},
     provide: {},
-    props: ['component', 'lang', 'children'],
+    props: ['component', 'lang', 'platform'],
     computed: {},
     watch: {},
     data() {
