@@ -1,6 +1,28 @@
 export default [
     {
         type: '',
-        list: []
+        name: '',
+        list: [
+            {
+                type: '{{properCase name}}',
+                theme: '',
+                name: '',
+                // 1:可以作为父组件 2: 只可以作为子组件
+                level: 2,
+                data: {},
+                pc: {
+                    units: {},
+                    style: {},
+                    class: {},
+                    visible: {}
+                },
+                phone: {
+                    units: {},
+                    style: {},
+                    class: {},
+                    visible: {}
+                }
+            }
+        ]
     }
 ]
