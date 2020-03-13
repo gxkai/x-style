@@ -1,12 +1,7 @@
 <template>
-    <a
-        v-if="component"
-        :href="component[platform].link.path"
-        :target="component[platform].target"
-        :style="[{ position }, styleObj, unitsObj]"
-    >
+    <a v-if="component" :href="dataObj.link.path" :target="dataObj.target" :style="[{ position }, styleObj, unitsObj]">
         <span>
-            {{ component[platform].text[this.lang] }}
+            {{ dataObj.text[this.lang] }}
         </span>
     </a>
 </template>
@@ -47,6 +42,9 @@ export default {
         },
         styleObj() {
             return this.component[this.platform].style;
+        },
+        dataObj() {
+            return this.component.data;
         }
     },
     watch: {},
