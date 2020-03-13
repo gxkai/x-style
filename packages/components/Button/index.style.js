@@ -4,6 +4,7 @@ export default [
         list: [
             {
                 type: 'Button',
+                theme: 'Theme 1',
                 name: '按钮',
                 level: 2,
                 data: {

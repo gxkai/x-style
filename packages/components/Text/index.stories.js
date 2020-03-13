@@ -6,16 +6,19 @@ storiesOf('Text', module)
         'pc',
         () => ({
             template: `
-<div>
-    <div v-for="(item,index) in list" :key="index">
-        <div>
-            {{item.type}}
-        </div>
-        <div>
-            <XText :component="component" :lang="lang" :platform="platform" v-for="(component,i) in item.list" :key="i" position="static"/>
-        </div>
-    </div>
-</div>
+                <div>
+                    <div v-for="(item,index) in list" :key="index">
+                        <h1>
+                            {{item.type}}
+                        </h1>
+                        <div  v-for="(component,i) in item.list" :key="i">
+                            <h2>
+                                {{component.theme}}
+                            </h2>
+                            <XText :component="component" :lang="lang" :platform="platform" position="static"/>
+                        </div>
+                    </div>
+                </div>
 `,
             data() {
                 return {
@@ -33,11 +36,14 @@ storiesOf('Text', module)
             template: `
             <div>
                 <div v-for="(item,index) in list" :key="index">
-                    <div>
+                    <h1>
                         {{item.type}}
-                    </div>
-                    <div>
-                        <XText :component="component" :lang="lang" :platform="platform" v-for="(component,i) in item.list" :key="i" position="static"/>
+                    </h1>
+                    <div  v-for="(component,i) in item.list" :key="i">
+                        <h2>
+                            {{component.theme}}
+                        </h2>
+                        <XText :component="component" :lang="lang" :platform="platform" position="static"/>
                     </div>
                 </div>
             </div>

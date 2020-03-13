@@ -5,6 +5,7 @@ export default [
             {
                 type: 'Box',
                 name: '自由容器',
+                theme: 'theme 1',
                 level: 1,
                 pc: {
                     units: {
