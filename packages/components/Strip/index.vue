@@ -76,7 +76,7 @@ export default {
     created() {},
     beforeMount() {},
     mounted() {
-        document.documentElement.scrollTop = 500;
+        // document.documentElement.scrollTop = 500;
     },
     beforeUpdate() {},
     updated() {},
