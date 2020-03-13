@@ -16,7 +16,7 @@
 import { parseUnits } from '@/lib/tools';
 
 export default {
-    name: 'Image',
+    name: 'Column',
     components: {},
     mixins: [],
     extends: {},

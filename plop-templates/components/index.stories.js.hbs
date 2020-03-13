@@ -34,11 +34,14 @@ platform: 'pc'
 template: `
 <div>
     <div v-for="(item,index) in list" :key="index">
-        <div>
+        <h1>
             {{item.type}}
-        </div>
-        <div>
-            <X{{properCase name}} :component="component" :lang="lang" :platform="platform" v-for="(component,i) in item.list" :key="i" position="static"/>
+        </h1>
+        <div v-for="(component,i) in item.list" :key="i">
+            <h2>
+                {{component.theme}}
+            </h2>
+            <X{{properCase name}} :component="component" :lang="lang" :platform="platform"  position="static"/>
         </div>
     </div>
 </div>

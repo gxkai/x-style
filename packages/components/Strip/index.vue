@@ -3,20 +3,31 @@
         v-if="component"
         :style="[
             {
-                position,
-                backgroundImage: 'url(' + dataObj.backgroundImage + ')'
+                position
             },
             styleObj,
             unitsObj
         ]"
-    ></div>
+    >
+        <div v-for="(list, index) in childrenObj" :key="index">
+            <component
+                v-for="(com, index) in list"
+                :is="`X${com.type}`"
+                :key="index"
+                :component="com"
+                :lang="lang"
+                :platform="platform"
+                position="absolute"
+            />
+        </div>
+    </div>
 </template>
 
 <script>
 import { parseUnits } from '@/lib/tools';
 
 export default {
-    name: 'Image',
+    name: 'Strip',
     components: {},
     mixins: [],
     extends: {},
@@ -52,6 +63,9 @@ export default {
         },
         dataObj() {
             return this.component.data;
+        },
+        childrenObj() {
+            return this.component[this.platform].children;
         }
     },
     watch: {},
@@ -61,7 +75,9 @@ export default {
     beforeCreate() {},
     created() {},
     beforeMount() {},
-    mounted() {},
+    mounted() {
+        document.documentElement.scrollTop = 500;
+    },
     beforeUpdate() {},
     updated() {},
     activated() {},
