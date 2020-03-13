@@ -9,7 +9,7 @@
             unitsObj
         ]"
     >
-        {{ component[platform].data.text[this.lang] }}
+        {{ dataObj.text[this.lang] }}
     </div>
 </template>
 
@@ -50,6 +50,9 @@ export default {
         },
         styleObj() {
             return this.component[this.platform].style;
+        },
+        dataObj() {
+            return this.component.data;
         }
     },
     watch: {},
