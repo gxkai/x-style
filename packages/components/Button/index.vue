@@ -1,5 +1,11 @@
 <template>
-    <styled-button v-if="component" :href="dataObj.link.path" :target="dataObj.target" :styled="{ ...styleObj, ...unitsObj, position }">
+    <styled-button
+        v-if="component"
+        :href="dataObj.link.path"
+        :target="dataObj.target"
+        :styled="{ ...styleObj, ...unitsObj, position }"
+        :hoverStyled="{ ...hoverStyleObj }"
+    >
         <span>
             {{ dataObj.text[this.lang] }}
         </span>
@@ -7,9 +13,9 @@
 </template>
 
 <script>
-import { parseUnits } from '@/lib/tools';
+import { parseUnits } from "@/lib/tools";
 export default {
-    name: 'Button',
+    name: "Button",
     components: {},
     mixins: [],
     extends: {},
@@ -23,20 +29,23 @@ export default {
         },
         lang: {
             type: String,
-            default: 'cn'
+            default: "cn"
         },
         platform: {
             type: String,
-            default: 'pc'
+            default: "pc"
         },
         position: {
             type: String,
-            default: 'absolute'
+            default: "absolute"
         }
     },
     computed: {
         unitsObj() {
-            const result = Object.assign({}, this.component[this.platform].units);
+            const result = Object.assign(
+                {},
+                this.component[this.platform].units
+            );
             parseUnits(result, this.platform);
             return result;
         },
@@ -45,6 +54,9 @@ export default {
         },
         dataObj() {
             return this.component.data;
+        },
+        hoverStyleObj() {
+            return this.component[this.platform].hoverStyle;
         }
     },
     watch: {},

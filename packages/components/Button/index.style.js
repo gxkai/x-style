@@ -1,22 +1,22 @@
 export default [
     {
-        type: 'Themed Buttons',
+        type: "Themed Buttons",
         list: [
             {
-                type: 'Button',
-                theme: 'Theme 1',
-                name: '按钮',
+                type: "Button",
+                theme: "Theme 1",
+                name: "按钮",
                 level: 2,
                 data: {
                     text: {
-                        cn: '按钮名称',
-                        en: 'button name'
+                        cn: "按钮名称",
+                        en: "button name"
                     },
                     link: {
                         linkType: 1,
                         linkId: null,
-                        linkTitle: '',
-                        path: 'javascript:;'
+                        linkTitle: "",
+                        path: "javascript:;"
                     },
                     target: false
                 },
@@ -30,13 +30,16 @@ export default [
                     },
                     style: {
                         zIndex: 999,
-                        display: 'flex',
-                        alignItems: 'center',
-                        color: '#ffffff', // 字体颜色
-                        background: '#000000', // 背景颜色
-                        borderStyle: 'solid', // 边框样式
-                        borderColor: '#efefef', // 边框颜色
-                        justifyContent: 'center' // 文字位置  center/left/right
+                        display: "flex",
+                        alignItems: "center",
+                        color: "#ffffff", // 字体颜色
+                        background: "#000000", // 背景颜色
+                        borderStyle: "solid", // 边框样式
+                        borderColor: "#efefef", // 边框颜色
+                        justifyContent: "center" // 文字位置  center/left/right
+                    },
+                    hoverStyle: {
+                        opacity: 0.5
                     },
                     class: {
                         // 类名
@@ -55,13 +58,13 @@ export default [
                     },
                     style: {
                         zIndex: 999,
-                        display: 'flex',
-                        alignItems: 'center',
-                        color: '#ffffff', // 字体颜色
-                        background: '#000000', // 背景颜色
-                        borderStyle: 'solid', // 边框样式
-                        borderColor: '#efefef', // 边框颜色
-                        justifyContent: 'center' // 文字位置  center/left/right
+                        display: "flex",
+                        alignItems: "center",
+                        color: "#ffffff", // 字体颜色
+                        background: "#000000", // 背景颜色
+                        borderStyle: "solid", // 边框样式
+                        borderColor: "#efefef", // 边框颜色
+                        justifyContent: "center" // 文字位置  center/left/right
                     },
                     class: {
                         // 类名
@@ -72,20 +75,20 @@ export default [
                 }
             },
             {
-                type: 'Button',
-                theme: 'Theme 2',
-                name: '按钮',
+                type: "Button",
+                theme: "Theme 2",
+                name: "按钮",
                 level: 2,
                 data: {
                     text: {
-                        cn: '按钮名称',
-                        en: 'button name'
+                        cn: "按钮名称",
+                        en: "button name"
                     },
                     link: {
                         linkType: 1,
                         linkId: null,
-                        linkTitle: '',
-                        path: 'javascript:;'
+                        linkTitle: "",
+                        path: "javascript:;"
                     },
                     target: false
                 },
@@ -99,13 +102,13 @@ export default [
                     },
                     style: {
                         zIndex: 999,
-                        display: 'flex',
-                        alignItems: 'center',
-                        color: '#000000', // 字体颜色
-                        background: '#ffffff', // 背景颜色
-                        borderStyle: 'solid', // 边框样式
-                        borderColor: '#000000', // 边框颜色
-                        justifyContent: 'center' // 文字位置  center/left/right
+                        display: "flex",
+                        alignItems: "center",
+                        color: "#000000", // 字体颜色
+                        background: "#ffffff", // 背景颜色
+                        borderStyle: "solid", // 边框样式
+                        borderColor: "#000000", // 边框颜色
+                        justifyContent: "center" // 文字位置  center/left/right
                     },
                     class: {
                         // 类名
@@ -124,13 +127,13 @@ export default [
                     },
                     style: {
                         zIndex: 999,
-                        display: 'flex',
-                        alignItems: 'center',
-                        color: '#000000', // 字体颜色
-                        background: '#ffffff', // 背景颜色
-                        borderStyle: 'solid', // 边框样式
-                        borderColor: '#000000', // 边框颜色
-                        justifyContent: 'center' // 文字位置  center/left/right
+                        display: "flex",
+                        alignItems: "center",
+                        color: "#000000", // 字体颜色
+                        background: "#ffffff", // 背景颜色
+                        borderStyle: "solid", // 边框样式
+                        borderColor: "#000000", // 边框颜色
+                        justifyContent: "center" // 文字位置  center/left/right
                     },
                     class: {
                         // 类名
@@ -141,20 +144,20 @@ export default [
                 }
             },
             {
-                type: 'Button',
-                theme: 'Theme 3',
-                name: '按钮',
+                type: "Button",
+                theme: "Theme 3",
+                name: "按钮",
                 level: 2,
                 data: {
                     text: {
-                        cn: '按钮名称',
-                        en: 'button name'
+                        cn: "按钮名称",
+                        en: "button name"
                     },
                     link: {
                         linkType: 1,
                         linkId: null,
-                        linkTitle: '',
-                        path: 'javascript:;'
+                        linkTitle: "",
+                        path: "javascript:;"
                     },
                     target: false
                 },
@@ -168,13 +171,13 @@ export default [
                     },
                     style: {
                         zIndex: 999,
-                        display: 'flex',
-                        alignItems: 'center',
-                        color: '#000000', // 字体颜色
-                        background: '#668F99', // 背景颜色
-                        borderStyle: 'solid', // 边框样式
-                        borderColor: '#ffffff', // 边框颜色
-                        justifyContent: 'center' // 文字位置  center/left/right
+                        display: "flex",
+                        alignItems: "center",
+                        color: "#000000", // 字体颜色
+                        background: "#668F99", // 背景颜色
+                        borderStyle: "solid", // 边框样式
+                        borderColor: "#ffffff", // 边框颜色
+                        justifyContent: "center" // 文字位置  center/left/right
                     },
                     class: {
                         // 类名
@@ -193,13 +196,13 @@ export default [
                     },
                     style: {
                         zIndex: 999,
-                        display: 'flex',
-                        alignItems: 'center',
-                        color: '#000000', // 字体颜色
-                        background: '#668F99', // 背景颜色
-                        borderStyle: 'solid', // 边框样式
-                        borderColor: '#ffffff', // 边框颜色
-                        justifyContent: 'center' // 文字位置  center/left/right
+                        display: "flex",
+                        alignItems: "center",
+                        color: "#000000", // 字体颜色
+                        background: "#668F99", // 背景颜色
+                        borderStyle: "solid", // 边框样式
+                        borderColor: "#ffffff", // 边框颜色
+                        justifyContent: "center" // 文字位置  center/left/right
                     },
                     class: {
                         // 类名
