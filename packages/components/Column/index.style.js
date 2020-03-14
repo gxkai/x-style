@@ -22,8 +22,13 @@ export default [
                     visible: {}
                 },
                 phone: {
-                    units: {},
-                    style: {},
+                    units: {
+                        width: 375,
+                        height: 300
+                    },
+                    style: {
+                        backgroundColor: '#000000'
+                    },
                     class: {},
                     visible: {}
                 }

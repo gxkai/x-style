@@ -1,13 +1,11 @@
 <template>
-    <div
+    <styled-strip
         v-if="component"
-        :style="[
-            {
-                position
-            },
-            styleObj,
-            unitsObj
-        ]"
+        :styled="{
+            ...styleObj,
+            ...unitsObj,
+            position
+        }"
     >
         <div v-for="(list, index) in childrenObj" :key="index">
             <component
@@ -20,7 +18,7 @@
                 position="absolute"
             />
         </div>
-    </div>
+    </styled-strip>
 </template>
 
 <script>

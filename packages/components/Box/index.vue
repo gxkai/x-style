@@ -1,14 +1,5 @@
 <template>
-    <div
-        v-if="component"
-        :style="[
-            styleObj,
-            unitsObj,
-            {
-                position
-            }
-        ]"
-    ></div>
+    <styled-box v-if="component" :styled="{ ...styleObj, ...unitsObj, position }"></styled-box>
 </template>
 <script>
 import { parseUnits } from '@/lib/tools';

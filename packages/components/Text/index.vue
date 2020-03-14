@@ -1,16 +1,7 @@
 <template>
-    <div
-        v-if="component"
-        :style="[
-            {
-                position
-            },
-            styleObj,
-            unitsObj
-        ]"
-    >
+    <styled-text v-if="component" :styled="{ ...styleObj, ...unitsObj, position }">
         {{ dataObj.text[this.lang] }}
-    </div>
+    </styled-text>
 </template>
 
 <script>

@@ -5,6 +5,8 @@ import '@/lib/axios';
 export const prefix = 'X';
 // 自定义组件
 const requireComponents = require.context('./components', true, /\.vue/);
+// 自定义样式组件
+const requireStyledComponents = require.context('./components', true, /\.styled.js/);
 const install = function(Vue) {
     requireComponents.keys().forEach(fileName => {
         if (fileName.split('/')[2] === 'children') return;
@@ -13,6 +15,10 @@ const install = function(Vue) {
         const reqComName = reqCom.default.name;
         // 组件挂载
         Vue.component(`${prefix.toUpperCase()}${reqComName}`, reqCom.default || reqCom);
+    });
+    requireStyledComponents.keys().forEach(fileName => {
+        const reqCom = requireStyledComponents(fileName);
+        Vue.component(reqCom.default.name, reqCom.default.instance);
     });
 };
 

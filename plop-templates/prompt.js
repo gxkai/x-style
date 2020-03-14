@@ -42,6 +42,11 @@ module.exports = {
                 type: 'add',
                 path: `packages/components/{{properCase name}}/index.style.js`,
                 templateFile: 'plop-templates/components/index.style.hbs'
+            },
+            {
+                type: 'add',
+                path: `packages/components/{{properCase name}}/index.styled.js`,
+                templateFile: 'plop-templates/components/index.styled.hbs'
             }
         ];
     }

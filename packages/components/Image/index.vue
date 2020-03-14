@@ -1,15 +1,8 @@
 <template>
-    <div
+    <styled-image
         v-if="component"
-        :style="[
-            {
-                position,
-                backgroundImage: 'url(' + dataObj.backgroundImage + ')'
-            },
-            styleObj,
-            unitsObj
-        ]"
-    ></div>
+        :styled="{ ...styleObj, ...unitsObj, position, backgroundImage: 'url(' + dataObj.backgroundImage + ')' }"
+    ></styled-image>
 </template>
 
 <script>

@@ -1,9 +1,9 @@
 <template>
-    <a v-if="component" :href="dataObj.link.path" :target="dataObj.target" :style="[{ position }, styleObj, unitsObj]">
+    <styled-button v-if="component" :href="dataObj.link.path" :target="dataObj.target" :styled="{ ...styleObj, ...unitsObj, position }">
         <span>
             {{ dataObj.text[this.lang] }}
         </span>
-    </a>
+    </styled-button>
 </template>
 
 <script>
