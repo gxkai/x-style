@@ -1,15 +1,20 @@
 <template>
     <styled-image
         v-if="component"
-        :styled="{ ...styleObj, ...unitsObj, position, backgroundImage: 'url(' + dataObj.backgroundImage + ')' }"
+        :style="{ ...unitsObj }"
+        :styled="{
+            ...styleObj,
+            position,
+            backgroundImage: 'url(' + dataObj.backgroundImage + ')'
+        }"
     ></styled-image>
 </template>
 
 <script>
-import { parseUnits } from '@/lib/tools';
+import { parseUnits } from "@/lib/tools";
 
 export default {
-    name: 'Image',
+    name: "Image",
     components: {},
     mixins: [],
     extends: {},
@@ -23,20 +28,23 @@ export default {
         },
         lang: {
             type: String,
-            default: 'cn'
+            default: "cn"
         },
         platform: {
             type: String,
-            default: 'pc'
+            default: "pc"
         },
         position: {
             type: String,
-            default: 'absolute'
+            default: "absolute"
         }
     },
     computed: {
         unitsObj() {
-            const result = Object.assign({}, this.component[this.platform].units);
+            const result = Object.assign(
+                {},
+                this.component[this.platform].units
+            );
             parseUnits(result, this.platform);
             return result;
         },

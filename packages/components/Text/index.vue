@@ -1,14 +1,18 @@
 <template>
-    <styled-text v-if="component" :styled="{ ...styleObj, ...unitsObj, position }">
+    <styled-text
+        v-if="component"
+        :style="{ ...unitsObj }"
+        :styled="{ ...styleObj, position }"
+    >
         {{ dataObj.text[this.lang] }}
     </styled-text>
 </template>
 
 <script>
-import { parseUnits } from '@/lib/tools';
+import { parseUnits } from "@/lib/tools";
 
 export default {
-    name: 'Text',
+    name: "Text",
     components: {},
     mixins: [],
     extends: {},
@@ -22,20 +26,23 @@ export default {
         },
         lang: {
             type: String,
-            default: 'cn'
+            default: "cn"
         },
         platform: {
             type: String,
-            default: 'pc'
+            default: "pc"
         },
         position: {
             type: String,
-            default: 'absolute'
+            default: "absolute"
         }
     },
     computed: {
         unitsObj() {
-            const result = Object.assign({}, this.component[this.platform].units);
+            const result = Object.assign(
+                {},
+                this.component[this.platform].units
+            );
             parseUnits(result, this.platform);
             return result;
         },
