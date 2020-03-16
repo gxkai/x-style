@@ -1,10 +1,9 @@
 <template>
     <styled-strip
         v-if="component"
-        :style="{ ...unitsObj }"
+        :style="{ ...unitsObj, position }"
         :styled="{
-            ...styleObj,
-            position
+            ...styleObj
         }"
     >
         <div v-for="(list, index) in childrenObj" :key="index">

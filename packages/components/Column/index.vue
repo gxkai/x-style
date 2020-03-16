@@ -1,10 +1,9 @@
 <template>
     <styled-column
         v-if="component"
-        :style="{ ...unitsObj }"
+        :style="{ ...unitsObj, position }"
         :styled="{
             ...styleObj,
-            position,
             backgroundImage: 'url(' + dataObj.backgroundImage + ')'
         }"
     ></styled-column>

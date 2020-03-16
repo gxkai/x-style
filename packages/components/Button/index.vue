@@ -3,8 +3,8 @@
         v-if="component"
         :href="dataObj.link.path"
         :target="dataObj.target"
-        :style="{ ...unitsObj }"
-        :styled="{ ...styleObj, position }"
+        :style="{ ...unitsObj, position }"
+        :styled="{ ...styleObj }"
         :hoverStyled="{ ...hoverStyleObj }"
     >
         <span>

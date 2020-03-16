@@ -1,8 +1,8 @@
 <template>
     <styled-box
         v-if="component"
-        :style="{ ...unitsObj }"
-        :styled="{ ...styleObj, position }"
+        :style="{ ...unitsObj, position }"
+        :styled="{ ...styleObj }"
     ></styled-box>
 </template>
 <script>

@@ -1,8 +1,8 @@
 <template>
     <styled-text
         v-if="component"
-        :style="{ ...unitsObj }"
-        :styled="{ ...styleObj, position }"
+        :style="{ ...unitsObj, position }"
+        :styled="{ ...styleObj }"
     >
         {{ dataObj.text[this.lang] }}
     </styled-text>
